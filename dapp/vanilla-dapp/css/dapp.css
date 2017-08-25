@@ -1,0 +1,35 @@
+body {
+    min-width: 320px;
+    background-color: #0C3459;
+    padding: 15px;
+    color: #000;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container-fluid {
+    background-color: #FFF;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.container-fluid-header {
+    background-color: #0C3459;
+    color: #EEE;
+    padding: 10px;
+}
+
+.background-gray-color {
+    background-color: #EEE;
+}
+
+label{
+    font-size: 1.25rem;
+}
+
+.list-group {
+    margin: 7px;
+}
+
+textarea {
+    resize: none;
+}
