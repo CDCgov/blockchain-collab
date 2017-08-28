@@ -33,3 +33,8 @@ label{
 textarea {
     resize: none;
 }
+
+.connHeader {
+    background-color:#FF4900;
+    padding-left: 3px;
+}
