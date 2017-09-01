@@ -3,14 +3,10 @@
 ### Run
 + Install Node.js and testrpc
 + Start testrpc from a terminal
-+ Open in browser (chrome) /build/index.html
++ Open in browser /build/index.html
++ submit record string to smart contract for response
 
 ### Dev
 + `npm install` for dependencies
 + `npm run build`  builds: src/js -> build/js/dapp.js
 + more info in package.json
-
-### Next
-+ deploy smart contract on testrpc
-+ interact with smart contract
-+ wonder blockchain

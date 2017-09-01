@@ -1,10 +1,10 @@
-export default function web3ConnStatus(web3){
+export default function web3ConnStatus(web3) {
 
-    var connText = document.getElementById('connText');
-    var connHeader = document.getElementById('connHeader');
-    
+    const connText = document.getElementById('connText');
+    const connHeader = document.getElementById('connHeader');
+
     if( web3.isConnected() ) {
-        
+
         connText.textContent = 'ONCHAIN';
         connHeader.style.backgroundColor = 'green';
 
@@ -14,5 +14,5 @@ export default function web3ConnStatus(web3){
         connHeader.style.backgroundColor = '#FF4900';
 
     }
-    
+
 }

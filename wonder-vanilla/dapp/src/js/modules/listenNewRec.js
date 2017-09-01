@@ -1,12 +1,13 @@
-import {default as sendRecToBlock } from './sendRecToBlock';
 
-export default function listenNewRec(){
+import {default as sendRecToContract } from './sendRecToContract';
+
+export default function listenNewRec(contract) {
 
     const newRecText = document.getElementById('newRecText');
 
     document.getElementById('submitNewRec').addEventListener('click', () => {
         
-        sendRecToBlock(newRecText.value);
+        return sendRecToContract(contract, newRecText.value);
             
     });
 
