@@ -2,24 +2,25 @@ export default function deployContract(web3, contractInterface, contractCompiled
     
     return new Promise(function(resolve, reject) {
 
-        var deployedContract = web3.eth.contract(contractInterface).new(
+        web3.eth.contract(contractInterface).new(
             {
                 from: web3.eth.accounts[0], 
                 data: contractCompiled, 
                 gas: '1234000'
-            }, function (e, contract){
+            }, function (err, contract){
 
-                //console.log(e, contract);
-                if (typeof contract.address !== 'undefined') {
-                    //console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
+                //console.log(err, contract);
+                if (err) { 
+                    reject(err);
                 }
-            });
 
-        if (deployContract) {
-            resolve(deployedContract);
-        } else {
-            reject(deployedContract);
-        }
+                if (typeof contract.address !== 'undefined') {
+
+                    //console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
+                    resolve(contract);
+                }
+
+            });
         
     });
 }

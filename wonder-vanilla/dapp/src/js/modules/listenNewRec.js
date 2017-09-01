@@ -1,4 +1,3 @@
-
 import {default as sendRecToContract } from './sendRecToContract';
 
 export default function listenNewRec(contract) {

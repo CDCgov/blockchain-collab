@@ -1,4 +1,3 @@
-
 export default function sendRecToContract(contract, record) {
 
     const viewRecText = document.getElementById('viewRecText');
