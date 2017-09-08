@@ -4,7 +4,7 @@
 + Install Node.js and testrpc
 + Start testrpc from a terminal
 + Open in browser /build/index.html
-+ submit record string to smart contract for response
++ Submit record string to smart contract for response
 
 ### Dev
 + `npm install` for dependencies
