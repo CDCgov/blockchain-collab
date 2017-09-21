@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"instr","type":"string"}],"name":"echoString","outputs":[{"name":"","type":"address"},{"name":"","type":"bytes32"},{"name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"}]
