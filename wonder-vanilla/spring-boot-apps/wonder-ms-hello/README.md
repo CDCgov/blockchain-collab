@@ -87,3 +87,29 @@ And you can use the echo API with the private key (that you got when `testrpc` s
 ```
 
 ![Screenshot](./screenshot.png "Swagger Documentation")
+
+
+## Want to know how the Java wrapper has been generated...
+
+First, I installed `web3j`:
+
+```
+brew tap web3j/web3j
+brew install web3j
+```
+
+Then, I generated the contracts in a format required by `web3j`:
+
+```
+solcjs echo.sol --bin --abi --optimize -o <SPRING BOOT APP HOME>/src/main/resources/
+```
+
+And, I generated the Java wrapper:
+
+```
+web3j solidity generate \
+	<SPRING BOOT APP HOME>/src/main/resources/echo_sol_Echo.bin \
+	<SPRING BOOT APP HOME>/src/main/resources/echo_sol_Echo.abi \
+	-o  <SPRING BOOT APP HOME>/src/main/java/ \
+	-p gov.cdc.wonder.contracts.hello
+```
