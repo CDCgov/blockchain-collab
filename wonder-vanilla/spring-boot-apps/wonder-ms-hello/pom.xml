@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>wonder-ms-hello</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 
 	<name>wonder-ms-hello</name>
@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.1.RELEASE</version>
+		<version>1.5.7.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
