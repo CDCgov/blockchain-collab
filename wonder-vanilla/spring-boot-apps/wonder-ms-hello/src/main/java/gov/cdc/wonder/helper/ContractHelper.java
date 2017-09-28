@@ -45,6 +45,8 @@ public class ContractHelper {
 
 			logger.debug("[ETH-INFO] Loading contract: " + contractAddress);
 			ese = Echo_sol_Echo.load(contractAddress, web3j, credentials, GAS_PRICE, GAS_LIMIT);
+			
+			startObservable();
 
 			c_privateKey = privateKey;
 		}
@@ -65,14 +67,18 @@ public class ContractHelper {
 		logger.debug("[ETH-INFO] Loading contract: " + contractAddress);
 		ese = Echo_sol_Echo.load(contractAddress, web3j, credentials, GAS_PRICE, GAS_LIMIT);
 
+		startObservable();
+		
+		return ese;
+	}
+
+	private static void startObservable() {
 		logger.debug("[ETH-INFO] Starting the observable...");
 		ese.newMessageEventObservable(DefaultBlockParameterName.EARLIEST, DefaultBlockParameterName.LATEST)
 				.subscribe(messageEvent -> {
 					logger.debug("[ETH-INFO] A new message has been posted from " + messageEvent.from + ": "
 							+ messageEvent.message);
 				});
-
-		return ese;
 	}
 
 	@Value("${blockchain.contracts.echo.address}")
