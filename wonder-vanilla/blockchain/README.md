@@ -109,4 +109,27 @@ It should print the address of the account that we created above. Then, you need
 personal.unlockAccount(eth.accounts[0])
 ```
 
+You can check the balance of all accounts by first creating the following function:
+
+```
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+};
+```
+
+Then, just call it:
+
+```
+> checkAllBalances();
+  eth.accounts[0]: 	0xb9e81aefb238289071b81e3d53a9045626ef020a 	balance: 200155 ether
+  Total balance: 200155 ether
+```
+
 And you are done!
